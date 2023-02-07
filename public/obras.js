@@ -1,0 +1,32 @@
+const obras = [
+    `El-Rei Seleuco (escrito em 1545, impresso pela primeira vez em 1616) é uma peça de teatro de Luís Vaz de Camões.
+    Trata-se de um auto que satiriza a nobreza. A trama baseia-se na intenção do rei de desposar a mulher que o seu filho ama. A atribuição do El-Rei Seleuco a Camões, porém, é controversa. Sua existência não era conhecida até 1654, quando apareceu publicada na primeira parte das Rimas na edição de Craesbeeck, que não dá detalhes sobre a sua origem e teve poucos cuidados na edição do texto. A peça também diverge em vários aspectos das outras duas que sobreviveram, tais como em sua extensão, bem mais curta (um ato), na existência de um prólogo em prosa, e no tratamento menos profundo e menos erudito do tema amoroso. O tema, da complicada paixão de Antíoco, filho do rei Seleuco, por sua madrasta, a rainha Estratonice, foi tirado de um fato histórico da Antiguidade transmitido por Plutarco e repetido por Petrarca e pelo cancioneiro popular espanhol, trabalhando-o ao estilo de Gil Vicente.`,
+    `Filodemo é uma comédia de Luís de Camões. Foi composto na Índia e dedicado ao vice-rei Dom Francisco Barreto. É uma comédia de moralidade em cinco atos, de acordo com a divisão clássica, sendo das três que se lhe atribuem a que se manteve mais viva no interesse da crítica pela multiplicidade de experiências humanas que descreve e pela agudeza da observação psicológica. O tema versa sobre os amores de um criado, Filodemo, pela filha, Dionisa, do fidalgo em casa de quem serve, com traços autobiográficos. Como as suas duas outras peças, o conteúdo geral da obra combina o nacionalismo e a inspiração clássica, na tradição das comédias de Gil Vicente.`,
+    'Os Lusíadas é uma obra de poesia épica do escritor português Luís Vaz de Camões, a primeira epopeia portuguesa publicada em versão impressa. Provavelmente iniciada em 1556 e concluída em 1571, foi publicada em Lisboa em 1572 no período literário do Classicismo, ou Renascimento tardio, três anos após o regresso do autor do Oriente, via Moçambique. A obra é composta por dez cantos, 1 102 estrofes e 8 816 versos em oitavas decassilábicas, sujeitas ao esquema rímico fixo AB AB AB CC – oitava rima real, ou camoniana. A ação central é a descoberta do caminho marítimo para a Índia por Vasco da Gama, à volta da qual se vão evocando outros episódios da história de Portugal, glorificado o povo português.',
+    'Anfitriões é uma comédia de Luís de Camões, escrita em forma de auto. Foi publicada em 1587, sendo uma adaptação do Amphitryon de Plauto, onde acentua o caráter cômico do mito de Anfitrião, destacando a onipotência do amor, que subjuga até os imortais, também seguindo a tradição vicentina. A peça foi escrita em redondilhas menores e faz uso do bilinguismo, empregando o castelhano nas falas do personagem Sósia, um escravo, para assinalar seu baixo nível social em passagens que chegam ao grotesco, um recurso que aparece nas outras peças também.',
+    'Rimas é o título da primeira compilação das poesias líricas de Luís de Camões, publicada em 1595, quinze anos após a morte do autor. Nesta edição o título apareceu com uma grafia arcaica, Rhythmas, e na segunda edição, de 1598, já foi adotada a grafia moderna.A coletânea compreende redondilhas, odes, glosas, cantigas, voltas ou variações, sextilhas, sonetos, elegias, éclogas e outras estâncias pequenas. Os sonetos seguem em geral o estilo italiano derivado de Petrarca, as canções tomaram o modelo de Petrarca e de Pietro Bembo. Nas odes se verifica a influência da poesia trovadoresca de cavalaria e da poesia clássica, mas com um estilo mais refinado; nas sextilhas aparece clara a influência provençal; nas redondilhas expandiu a forma, aprofundou o lirismo e introduziu uma temática, trabalhada em antíteses e paradoxos, desconhecida na antiga tradição das cantigas de amigo, e as elegias são bastante classicistas. Suas estâncias seguem um estilo epistolar, com temas moralizantes. A écoglas são peças perfeitas do gênero pastoral, derivado de Virgílio e dos italianos.A despeito dos cuidados do primeiro editor das Rimas, Fernão Rodrigues Lobo Soropita, na edição de 1595 foram incluídos vários poemas apócrifos. Muitos poemas foram sendo descobertos ao longo dos séculos seguintes e a ele atribuídos, mas nem sempre com uma análise crítica cuidadosa. O resultado foi que, por exemplo, enquanto nas Rimas originais havia 65 sonetos, na edição de 1861 de Juromenha havia 352; na edição de 1953 de Aguiar e Silva ainda eram listadas 166 peças.[3] [4][5] Além disso, muitas edições modernizaram ou "embelezaram" o texto original, prática acentuada em particular depois da edição de 1685 de Faria e Souza, fazendo nascer e enraizar uma tradição própria sobre esta lição adulterada que causou enormes dificuldades para o estudo crítico. Estudos mais científicos só começaram a ser empreendidos no final do século XIX, com a contribuição de Wilhelm Storck e Carolina Michaelis de Vasconcelos, que descartaram diversas composições apócrifas. No início do século XX os trabalhos continuaram com José Maria Rodrigues e Afonso Lopes Vieira, que publicaram em 1932 as Rimas numa edição que chamaram de "crítica", embora não merecesse o nome: adotou largas partes da lição de Faria e Souza, mas os editores alegaram ter usado as edições originais, de 1595 e 1598. Por outro lado, levantaram definitivamente a questão da fraude textual que vinha se perpetuando há muito tempo e havia adulterado os poemas a ponto de se tornarem irreconhecíveis'
+];
+
+let seleuco = document.getElementById('reiSeleuco');
+let filodemo = document.getElementById('filodemo');
+let lusiadas = document.getElementById('lusiadas');
+let anfitrioes = document.getElementById('anfitrioes');
+let rimas = document.getElementById('rimas');
+
+let canvas = document.getElementById('seccao_obras');
+let obras_work = document.getElementById('work_text');
+
+
+seleuco.onclick = () => addWork(obras, 0)
+filodemo.onclick = () => addWork(obras, 1)
+lusiadas.onclick = () => addWork(obras, 2)
+anfitrioes.onclick = () => addWork(obras, 3)
+rimas.onclick = () => addWork(obras, 4)
+
+const addWork = (arr, index) => {
+    if(obras_work.innerHTML.trim() == ''){
+        obras_work.innerHTML = arr[index]
+    } else {
+        obras_work.innerHTML = '';
+    }
+}

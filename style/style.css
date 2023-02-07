@@ -1,0 +1,179 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Sassy Frass';
+    src: url(/SassyFrass-Regular.ttf) format('woff2');
+   }
+
+@font-face {
+font-family: 'confortaa';
+src: url(/Comfortaa/Comfortaa-VariableFont_wght.ttf) format('woff2');
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 57, 108);
+    font-family: confortaa;    
+}
+
+header {
+    margin-top: 80px;
+}
+
+#links {
+    position: absolute;
+    top: 160px;
+    right: 50px;
+}
+
+nav {
+    background-image: url(/livro.jpeg);
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+
+#title_home {
+    font-size: 60px;
+    transition-duration: 1s;
+    margin: 0 0 0 50px;
+    height: 200px;
+    text-align: start;
+    font-family: Sassy Frass;
+    font-weight: 100;
+}
+
+#luis_foto {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    opacity: 0.3;
+}
+
+#poem__homePage {
+    width: auto;
+    line-height: 35px;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#links > a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding: 0 90px;
+    transition-duration: 1s;
+}
+
+#links > a:hover {
+    color: orangered;
+    padding: -50px 100px;
+    font-size: 60px;
+    transition-duration: 1s;
+}
+
+header:has(#links > a:hover) #title_home{
+    color: rgb(234, 226, 172);
+    transition-duration: 1s;
+    font-size: 90px;
+}
+
+#links > a:active {
+    transition: 0s;
+    font-weight: bold;
+    color: rgb(234, 226, 172);
+}
+
+#body_about, #body_works {
+    text-align: center;
+}
+
+#body_about {
+    background-image: url('/camoespaint.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#body_works {
+    background-image: url(/background_camoes.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw;
+}
+
+#about_article {
+width: 70%;
+margin: auto;
+color: black;
+font-weight: 900;
+height: auto;
+}
+
+#camoes_fernao {
+    float: left;
+    padding: 5px 20px 0;
+}
+
+#title_about {
+    transition-duration: 1s;
+}
+
+body:has(#about_article:hover) #title_about{
+    color: rgb(234, 226, 172);
+    transition-duration: 1s;
+    font-size: 50px;
+}
+
+.goBack {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    margin: 50px 0 100px;
+}
+
+.goBack a {
+    text-decoration: none;
+    color: orangered;
+    transition-duration: 1s;
+}
+
+.goBack > a:hover {
+    font-size: 40px;
+    transition-duration: 1s;
+    color: white;
+}
+
+.aboutBut {
+    position: relative;
+    top: 0;
+    left: 500px;
+}
+
+#title_works {
+    color: rgb(234, 226, 172);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#works_list {
+    width: 40%;
+    margin: auto;
+    color: rgb(234, 226, 172);
+}
+
+#works_list li {
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#seccao_obras p {
+    height: auto;
+    padding-top: 40px;
+    width: 70%;
+    margin: auto;
+    color: rgb(234, 226, 172);
+}
