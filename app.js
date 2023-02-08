@@ -18,4 +18,8 @@ app.get('/about', (request, response) => {
 app.get('/works', (request, response) => {
     response.sendFile(__dirname + '/views/works.html')
 })
+
+app.get('/galery', (request, response) => {
+    response.sendFile(__dirname + '/views/galery.html')
+})
 app.listen(3000, () => console.log('Server running on port 3000'))

@@ -87,7 +87,7 @@ header:has(#links > a:hover) #title_home{
     color: rgb(234, 226, 172);
 }
 
-#body_about, #body_works {
+#body_about, #body_works, #body_galery {
     text-align: center;
 }
 
@@ -176,4 +176,29 @@ body:has(#about_article:hover) #title_about{
     width: 70%;
     margin: auto;
     color: rgb(234, 226, 172);
+}
+
+#body_galery {
+    background-image: url(/galeryBG.jpg);
+}
+
+#card_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(234, 234, 234);
+    margin: 20px;
+}
+
+.image_galery {
+    width: 200px;
+    height: 300px;
 }
